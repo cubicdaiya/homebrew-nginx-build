@@ -1,6 +1,6 @@
 require 'formula'
 
-HOMEBREW_NGINX_BUILD_VERSION='0.6.8'
+HOMEBREW_NGINX_BUILD_VERSION='0.7.0'
 class NginxBuild < Formula
   homepage 'https://github.com/cubicdaiya/nginx-build'
   url 'https://github.com/cubicdaiya/nginx-build.git', :tag => "v#{HOMEBREW_NGINX_BUILD_VERSION}"
