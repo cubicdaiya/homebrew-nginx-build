@@ -12,7 +12,7 @@ class NginxBuild < Formula
 
   def install
     ENV['GOPATH'] = buildpath
-    mkdir_p buildpath/'src/github.com/cubicdaiya/nginx-build'
+    mkdir_p buildpath/'src/github.com/cubicdaiya'
     ln_s buildpath, buildpath/'src/github.com/cubicdaiya/nginx-build'
     system 'go', 'get', 'github.com/go-ini/ini'
     system 'go', 'build', '-o', 'nginx-build'
