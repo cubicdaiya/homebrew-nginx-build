@@ -14,7 +14,8 @@ class NginxBuild < Formula
     ENV['GOPATH'] = buildpath
     mkdir_p buildpath/'src/github.com/cubicdaiya/nginx-build'
     ln_s buildpath/'nginx-build', buildpath/'src/github.com/cubicdaiya/nginx-build/.'
-    system 'go', 'get', 'github.com/go-ini/ini'
+    system 'go', 'get', 'github.com/Masterminds/glide'
+    system 'glide', 'install'
     system 'go', 'build', '-o', 'nginx-build'
     bin.install 'nginx-build'
   end
